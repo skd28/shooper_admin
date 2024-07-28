@@ -5,7 +5,7 @@ import axios from 'axios'
 
 const AddProduct = () => {
 
-  const[image,setImage] = useState(false);
+  // const[image,setImage] = useState(false);
   const [productDetails,setProductDetails] = useState({
       name:"",
       image:"",
@@ -27,7 +27,7 @@ const AddProduct = () => {
       formData.append('image',productDetails.image)
     }
     try {
-          const response = await axios.post('http://localhost:4000/addproduct',formData,{
+          const response = await axios.post('https://shooper-backend.vercel.app/addproduct',formData,{
             headers :{
               'Content-Type':'multipart/form-data'
             }
